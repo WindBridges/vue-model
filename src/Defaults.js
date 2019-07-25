@@ -21,6 +21,8 @@ export default {
         // return until `takeAtLeast` milliseconds have passed
         takeAtLeast: 0,
 
+        useGlobalAxios: false,
+
         // Return an axios request configuration object
         // https://github.com/axios/axios#request-config
         axios(configuration, action, definition, runtimeArgs) {

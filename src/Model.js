@@ -117,7 +117,7 @@ export default class Model {
     }
 
     getAxiosInstance() {
-        return axios.create();
+        return this.settings.http.useGlobalAxios ? Vue.axios : axios.create();
     }
 
     getAxiosConfiguration(runtimeArgs, definition, key) {
