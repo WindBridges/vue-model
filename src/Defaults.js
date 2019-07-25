@@ -1,6 +1,6 @@
-var _ = require('lodash');
+import _ from 'lodash'
 
-module.exports = {
+export default {
     // The default model attributes. We'll initialize them all to
     // null if there are no values for them. This is the starting
     // point for the data that is sent to the server

@@ -1,6 +1,9 @@
-var _ = require('lodash');
-var Bus = require('./PubSub');
-var setNested = require('./lib/set-nested');
+import _ from 'lodash'
+import Bus from './PubSub'
+import setNested from './lib/set-nested'
+import Model from './Model'
+import Errors from './Errors'
+import Defaults from './Defaults'
 
 class VueModel {
     constructor() {
@@ -145,9 +148,9 @@ class VueModel {
         }
 
         this.classes = _.defaults(options.classes, {
-            model: require('./Model'),
-            errors: require('./Errors'),
-            defaults: require('./Defaults'),
+            model: Model,
+            errors: Errors,
+            defaults: Defaults,
         });
 
         var registry = _.get(options, 'models', {});
@@ -195,4 +198,4 @@ class VueModel {
     }
 }
 
-module.exports = new VueModel();
+export default new VueModel();
